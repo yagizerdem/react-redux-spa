@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import store from "../../store";
 import { updateError, createUserObject, updateUser } from "../user/userSlice";
+import { userSignIn } from "../../services/apiFakeStore";
 
 export default function Login() {
   const { error } = useSelector((state) => state.user);
@@ -77,25 +78,7 @@ export async function action({ request }) {
     email,
     phone,
   });
-
-  const userSignIn = async function () {
-    try {
-      const response = await fetch("https://fakestoreapi.com/users", {
-        method: "POST",
-        body: JSON.stringify(user),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to sign in");
-      }
-
-      const data = await response.json();
-      return data; // Return the data obtained from the response
-    } catch (error) {
-      throw new Error("Failed to sign in: " + error.message); // Propagate the error
-    }
-  };
-  const result = await userSignIn();
+  const result = await userSignIn(user);
 
   user.id = result.id;
   store.dispatch(updateUser(user));

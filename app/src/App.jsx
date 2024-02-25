@@ -8,6 +8,9 @@ import ErrorPage from "./ui/ErrorPage";
 import Home from "./ui/Home";
 import { action as loginAction } from './features/auth/LogIn';
 import Menu from './features/menu/Menu';
+import { loader as categoryLoader } from './features/menu/Menu';
+import Products from './features/products/Products';
+import { loader as productLoader } from './features/products/Products';
 
 const router = createBrowserRouter([
   {
@@ -23,13 +26,24 @@ const router = createBrowserRouter([
       {
         path:'/menu',
         element:<Menu/>,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
+        loader: categoryLoader,
+        children:[
+          {
+            path:'/menu/:category?',
+            element:<Products/>,
+            errorElement: <ErrorPage />,
+            loader :productLoader
+          },
+        ]
       }
     ]
   },
 ]);
 
 function App() {
+
+
 
   return (      
     <>
