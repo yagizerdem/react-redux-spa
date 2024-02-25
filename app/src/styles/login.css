@@ -1,0 +1,35 @@
+.login-card{
+    width: 400px;
+    height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: rgb(246, 242, 242);
+}
+.login-card > header{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    margin:  20px 0;
+    display: block;    
+}
+.login-card .form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.form-container > input{
+    display: block;
+    margin:10px 0 30px 0;
+    width: 200px;
+    padding: 10px;
+}
+.login-card > hr{
+    width: 300px;
+    display: block;
+    margin: 10px auto;
+}

@@ -1,0 +1,21 @@
+:root {
+  --HeavyPurple: #a28089;
+  --IceCold: #a0d2eb;
+  --FreezePurple: #e5eaf5;
+  --MediumPurple: #d0bdf4;
+  --PurplePain: #8458b3;
+  --BrightlyOrange: #ff1e00;
+  --DimlyBlue: #e8f9fd;
+  --AlertHighlightGreen: #59ce8f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  background-color: var(--FreezePurple);
+}
