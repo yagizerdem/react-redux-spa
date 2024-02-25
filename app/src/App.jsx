@@ -11,6 +11,10 @@ import Menu from './features/menu/Menu';
 import { loader as categoryLoader } from './features/menu/Menu';
 import Products from './features/products/Products';
 import { loader as productLoader } from './features/products/Products';
+import CartMenu from './features/cart/CartMenu';
+import OrderConfirmation from './features/cart/OrderConfirmation';
+import { action as orderAction } from './features/cart/OrderConfirmation';
+import OrderedLayout from './features/cart/OrderedLayout';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +40,23 @@ const router = createBrowserRouter([
             loader :productLoader
           },
         ]
+      },
+      {
+        path:'/shoplist',
+        element:<CartMenu/>,
+        errorElement: <ErrorPage />
+      },
+      {
+        path:'/orderconfirmation',
+        element:<OrderConfirmation/>,
+        errorElement: <ErrorPage />,
+        action:orderAction
+      },
+      {
+        path:'/orderedlayout',
+        element:<OrderedLayout/>,
+        errorElement: <ErrorPage />,
+        action:orderAction
       }
     ]
   },

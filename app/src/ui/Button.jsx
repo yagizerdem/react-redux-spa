@@ -11,9 +11,9 @@ export default function Button({ children, disabled, to, type, onClick }){
     }
     if(onClick){
         return(
-            <div style={type} onClick={onClick} disabled={disabled}>
+            <button style={type} onClick={onClick} disabled={disabled}>
                 {children}
-            </div>
+            </button>
         )
     }
 

@@ -2,3 +2,35 @@
     width: 80%;
     margin: 10px auto;    
 }
+.product-item-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.product-item{
+    width: 200px;
+    margin: 50px 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
+}
+.product-item  >img {
+    height: 200px;
+    width: 160px;
+}
+.product-item > hr{
+    margin: 10px 0;
+    width: 200px;
+    height: 2px;
+}
+.product-item > h3{
+    text-align: center;
+}
+.product-item  > .description > span{
+    display: block;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 20px 0;
+}

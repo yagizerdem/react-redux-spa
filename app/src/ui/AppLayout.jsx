@@ -1,4 +1,5 @@
 import { Outlet , useNavigation } from "react-router-dom"
+import Loader from "./Loader";
 
 export default function AppLayout(){
     const navigation = useNavigation();
@@ -7,7 +8,7 @@ export default function AppLayout(){
 
     return(
         <div>
-            {isLoading && <div>loader</div>}
+            {isLoading && <Loader></Loader>}
             <Outlet></Outlet>
         </div>
     )

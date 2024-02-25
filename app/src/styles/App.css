@@ -19,3 +19,140 @@
 body {
   background-color: var(--FreezePurple);
 }
+.yield-compoennt{
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  border-radius:10px;
+  background-color: var(--DimlyBlue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basket-icon{
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--FreezePurple);
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.cart-menu{
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  overflow-y: scroll;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top: -200px;
+  margin-left: -300px;
+}
+.empty-basket{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 100px;
+}
+.all-cart-list  li{
+  margin: 40px 20px;
+  list-style-type: none;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row > img{
+  width: 100px;
+  height: 150px;
+}
+.all-cart-list hr{
+  width: 80%;
+  margin: 20px auto;
+}
+.item-title{
+  width: 100px;
+  margin: 0 20px;
+}
+.quantity{
+  margin: 0 10px;
+}
+.minus ,  .plus{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--FreezePurple);
+  margin: 20px 0;
+  cursor: pointer;
+}
+.order-container{
+  width: 400px;
+  height: 450px;
+  background-color: #fff;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50% , -50%);
+
+}
+.order-container > .form{
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.order-container > .form input{
+  margin: 10px 0;
+  padding: 5px;
+}
+.btn-findlocation , .fire-order{
+  margin-top: 10px;
+  background-color: var(--FreezePurple);
+  padding: 10px;
+  width: 200px;
+  color: var(--MediumPurple);
+  cursor: pointer;
+  border: none;
+  font-weight: bolder;
+}
+.fire-order{
+  background-color: var(--BrightlyOrange);
+  color: #fff;
+  font-size: 20px;
+}
+.order-layout{
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  flex-direction: column;
+}
+.order-layout button{
+  margin-top: 40px;
+  background-color: var(--IceCold);
+  padding: 10px;
+  font-weight: bold;
+  color: #e8f9fd;
+  border: none;
+  cursor: pointer;
+}
